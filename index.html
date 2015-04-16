@@ -28,7 +28,6 @@
       link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
       document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
-
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
@@ -47,6 +46,7 @@
             <small>Ashok Modi | LBTech | April 2015</small>
           </p>
         </section>
+
         <section>
           <h2>Ashok Modi</h2>
           <h3>Cherry Hill Company</h3>
@@ -55,8 +55,9 @@
           <h6>Love improving developer experience</h6>
             <p><small>Yes, these are h2 - h6. I wanted to try reveal.js</small></p>
         </section>
+
         <section>
-          <h1>Agenda</h1>
+          <h2>Agenda</h2>
           <ul>
             <li>What is Ansible</li>
             <li>Why use Ansible</li>
@@ -71,6 +72,7 @@
           </ul>
           <p><small>Ask questions any time</small></p>
         </section>
+
         <section>
           <h2>What is ansible?</h2>
           <ul>
@@ -80,6 +82,7 @@
           </ul>
           <p><small>* Except for the inventory file</small></p>
         </section>
+
         <section>
           <h2>Why use Ansible?</h2>
           <ul>
@@ -88,6 +91,7 @@
             <li>Fewest dependencies (only need SSH!)</li>
           </ul>
         </section>
+
         <section>
           <section>
             <h2>Components</h2>
@@ -130,6 +134,7 @@ three.example.com
             </pre>
           </section>
         </section>
+
         <section>
           <section>
             <h2>Components</h2>
@@ -168,6 +173,7 @@ three.example.com
             </pre>
           </section>
         </section>
+
         <section>
           <section>
             <h2>Components</h2>
@@ -208,12 +214,13 @@ three.example.com
             </pre>
           </section>
         </section>
+
         <section>
           <h2>Other concepts</h2>
           <ul>
-            <li>Variables</li>
-            <li>Templates (Jinja2)</li>
-            <li>Dependencies</li>
+            <li><a href="http://docs.ansible.com/playbooks_roles.html#role-dependencies">Dependencies</a></li>
+            <li><a href="http://docs.ansible.com/playbooks_variables.html">Variables</a></li>
+            <li><a href="http://docs.ansible.com/template_module.html">Templates (Jinja2)</a></li>
           </ul>
         </section>
 
@@ -227,9 +234,22 @@ three.example.com
             <li>1 primary database server (postgresql)</li>
             <li>1 replica database server (postgresql)</li>
           </ul>
-          <p><a href="https://github.com/webapp-builders/ghost-ansible-cluster">Try it out</a> <br>(https://github.com/webapp-builders/ghost-ansible-cluster)</p>
+          <p><a href="https://github.com/webapp-builders/ghost-ansible-cluster">Try it out</a></p>
         </section>
 
+        <section>
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="http://docs.ansible.com">Official Ansible Docs</a></li>
+            <li><a href="https://leanpub.com/ansible-for-devops">Ansible for DevOps by Jeff Geerling</a></li>
+            <li><a href="http://www.meetup.com/Ansible-Los-Angeles/">LA Ansible Meetup</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Questions?</h3>
+          <h2>Thank you!</h2>
+        </section>
 
 
       </div>
@@ -249,7 +269,7 @@ three.example.com
         history: true,
         center: true,
 
-        transition: 'fade', // none/fade/slide/convex/concave/zoom
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
 
         // Optional reveal.js plugins
         dependencies: [
