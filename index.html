@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/sky.css" id="theme">
+    <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
 
     <!-- Code syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -43,22 +43,23 @@
           <h1>Ansible</h1>
           <h3>Bringing Sanity to Configuration Management</h3>
           <p>
-            <small><a href="http://btmash.com">Ashok Modi</a> | LBTech - April 2015</small>
+            <small><a href="https://www.btmash.com">Ashok Modi</a> | SANDCamp 2018</small>
           </p>
         </section>
 
         <section>
           <h2>Ashok Modi</h2>
-          <h3><a href="http://chillco.com">The Cherry Hill Company</a></h3>
+          <h3>Engineer - <a href="https://www.card.com">CARD.com</a></h3>
           <h4>Love servers</h4>
           <h5>Love automation</h5>
-          <h6>Love improving developer experience</h6>
-            <p><small>Yes, these are h2 - h6. I wanted to try reveal.js</small></p>
         </section>
 
         <section>
           <h2>Agenda</h2>
           <ul>
+            <li>
+              What about containers?
+            </li>
             <li>What is Ansible</li>
             <li>Why use Ansible</li>
             <li>Components
@@ -74,9 +75,29 @@
         </section>
 
         <section>
+          <h2>Why not containers? Ansible is old</h2>
+          <ul>
+            <li>
+              Containers are amazing technology (Docker is fantastic)
+            </li>
+            <li>
+              Lando, Vessel, Docksal are all fantastic
+            </li>
+            <li>
+              You can pin the version of php, set up a networked cluster for all
+              services
+            </li>
+            <li>
+              Secrets management = you need to learn Kubernetes/Mesos <br />
+              Swarm isn't really an option.
+            </li>
+          </ul>
+        </section>
+
+        <section>
           <h2>What is ansible?</h2>
           <ul>
-            <li>Configuration Management Tool (what is that?)</li>
+            <li>Configuration Management Tool (what is that?) for servers the 'old fashioned' way</li>
             <li>Written in Python (like Django, Flask, Fabric)</li>
             <li>Uses YAML format*</li>
           </ul>
@@ -87,8 +108,12 @@
           <h2>Why use Ansible?</h2>
           <ul>
             <li>Well maintained</li>
-            <li>"Easiest to understand"</li>
+            <li>Easy to understand</li>
             <li>Few dependencies (only need SSH!)</li>
+            <li>
+              Remote libraries provide a *lot* of configuration that will get you
+              90% of the way to managing your servers.
+            </li>
           </ul>
         </section>
 
@@ -228,11 +253,12 @@ three.example.com
           <h2>Demo</h2>
           <p>Using Vagrant to spin them up, Ansible for setup</p>
           <ul>
-            <li>Ghost.js application</li>
-            <li>1 application server (node.js, nginx)</li>
-            <li>1 database pooling (load balancer) server</li>
-            <li>1 primary database server (postgresql)</li>
-            <li>1 replica database server (postgresql)</li>
+            <li>Drupal 8 application</li>
+            <li>1 application server (NGINX, PHP-FPM, COMPOSER, DRUSH, DRUPAL CONSOLE)</li>
+            <li>1 database server (MARIADB)</li>
+            <li>
+              (not in demo) 1 or more performance servers (REDIS, SOLR, etc)
+            </li>
           </ul>
           <p><a href="https://github.com/webapp-builders/ghost-ansible-cluster">Try it out</a></p>
         </section>
