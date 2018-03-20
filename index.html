@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Ansible - Bringing Sanity to Configuration Management</title>
+    <title>Simplify Server and Application Management with Ansible</title>
 
     <meta name="description" content="Using Ansible to bring sanity in setting up and maintaining servers">
     <meta name="author" content="Ashok Modi">
@@ -41,7 +41,7 @@
       <div class="slides">
         <section>
           <h1>Ansible</h1>
-          <h3>Bringing Sanity to Configuration Management</h3>
+          <h3>Simplify Server and Application Management</h3>
           <p>
             <small><a href="https://www.btmash.com">Ashok Modi</a> | SANDCamp 2018</small>
           </p>
@@ -57,10 +57,10 @@
         <section>
           <h2>Agenda</h2>
           <ul>
+            <li>What is Ansible</li>
             <li>
               What about containers?
             </li>
-            <li>What is Ansible</li>
             <li>Why use Ansible</li>
             <li>Components
               <ul>
@@ -75,13 +75,23 @@
         </section>
 
         <section>
+          <h2>What is ansible?</h2>
+          <ul>
+            <li>Configuration Management Tool (what is that?) for servers the 'old fashioned' way</li>
+            <li>Written in Python (like Django, Flask, Fabric)</li>
+            <li>Uses YAML format*</li>
+          </ul>
+          <p><small>* Except for the inventory file</small></p>
+        </section>
+
+        <section>
           <h2>Why not containers? Ansible is old</h2>
           <ul>
             <li>
-              Containers are amazing technology (Docker is fantastic)
+              Docker (and Containers) is amazing!
             </li>
             <li>
-              Lando, Vessel, Docksal are all fantastic
+              Lando, Vessel, Docksal are all fantastic (all for dev)
             </li>
             <li>
               You can pin the version of php, set up a networked cluster for all
@@ -95,24 +105,19 @@
         </section>
 
         <section>
-          <h2>What is ansible?</h2>
-          <ul>
-            <li>Configuration Management Tool (what is that?) for servers the 'old fashioned' way</li>
-            <li>Written in Python (like Django, Flask, Fabric)</li>
-            <li>Uses YAML format*</li>
-          </ul>
-          <p><small>* Except for the inventory file</small></p>
-        </section>
-
-        <section>
           <h2>Why use Ansible?</h2>
           <ul>
             <li>Well maintained</li>
             <li>Easy to understand</li>
             <li>Few dependencies (only need SSH!)</li>
             <li>
-              Remote libraries provide a *lot* of configuration that will get you
-              90% of the way to managing your servers.
+              Ansible Galaxy = less 'custom' code
+            </li>
+            <li>
+              Some integration with Docker though it is getting better
+            </li>
+            <li>
+              Use Ansible to prep Docker!
             </li>
           </ul>
         </section>
@@ -253,14 +258,14 @@ three.example.com
           <h2>Demo</h2>
           <p>Using Vagrant to spin them up, Ansible for setup</p>
           <ul>
-            <li>Drupal 8 application</li>
             <li>1 application server (NGINX, PHP-FPM, COMPOSER, DRUSH, DRUPAL CONSOLE)</li>
             <li>1 database server (MARIADB)</li>
+            <li>(If we have time) Drupal 8 application</li>
             <li>
               (not in demo) 1 or more performance servers (REDIS, SOLR, etc)
             </li>
           </ul>
-          <p><a href="https://github.com/webapp-builders/ghost-ansible-cluster">Try it out</a></p>
+          <p><a href="https://github.com/btmash/drupal_ansible">Try it out</a></p>
         </section>
 
         <section>
