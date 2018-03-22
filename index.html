@@ -81,7 +81,7 @@
             <li>Written in Python (like Django, Flask, Fabric)</li>
             <li>Uses YAML format*</li>
           </ul>
-          <p><small>* Except for the inventory file</small></p>
+          <p><small>* Except for the inventory file if you choose</small></p>
         </section>
 
         <section>
@@ -130,7 +130,7 @@
           <section>
             <h2>Inventory</h2>
             <ul>
-              <li>Written in INI-like format</li>
+              <li>Written in INI or YAML format</li>
               <li>Consists of hosts, groups</li>
               <li>Hosts are IP address of server along with additional info (ssh port to connect, ssh password, sudo password, etc)</li>
               <li>Groups are collections of hosts, to denote a host will run certain playbooks</li>
@@ -138,30 +138,31 @@
           </section>
           <section>
             <h2>Inventory</h2>
-            <ul>
-              <li>Can pull from multiple files</li>
-              <li>Can pull from dynamic/cloud sources</li>
-            </ul>
+            <h3>Example</h3>
+            <pre>
+webapp1 ansible_ssh_host=173.230.156.63
+app1 ansible_ssh_host=12.34.56.78
+app2 ansible_ssh_host=10.0.0.2 ansible_ssh_user=btmash
+db1 ansible_ssh_host=1.2.3.5 ansible_ssh_user=btmash ansible_ssh_pass=NoWayMan!
+
+[application]
+webapp1
+app1
+app2
+
+[webservers]
+webapp1
+
+[dbservers]
+db1
+            </pre>
           </section>
           <section>
             <h2>Inventory</h2>
-            <h3>Example</h3>
-            <pre>
-[application]
-application.example.com
-multi.example.com
-12.34.56.78
-
-[webservers]
-foo.example.com ansible_ssh_user=btmash
-bar.example.com ansible_ssh_user=btmash ansible_ssh_pass=NoWayMan!
-multi.example.com
-
-[dbservers]
-one.example.com
-two.example.com
-three.example.com
-            </pre>
+            <ul>
+              <li>Can pull from static files</li>
+              <li>Can pull from dynamic/cloud sources</li>
+            </ul>
           </section>
         </section>
 
@@ -248,9 +249,10 @@ three.example.com
         <section>
           <h2>Other concepts</h2>
           <ul>
-            <li><a href="http://docs.ansible.com/playbooks_roles.html#role-dependencies">Dependencies</a></li>
             <li><a href="http://docs.ansible.com/playbooks_variables.html">Variables</a></li>
             <li><a href="http://docs.ansible.com/template_module.html">Templates (Jinja2)</a></li>
+            <li><a href="http://docs.ansible.com/ansible/latest/vault.html">Encrypted Data</a></li>
+            <li><a href="http://docs.ansible.com/playbooks_roles.html#role-dependencies">Ansible Galaxy</a></li>
           </ul>
         </section>
 
